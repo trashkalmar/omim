@@ -7457,7 +7457,7 @@
 
   [routing_go]
     tags = ios,android,tizen
-    comment = Button for routing PP.
+    comment = Button for routing.
     en = Go!
     th = ไป!
     uk = Поїхали!
@@ -7487,6 +7487,18 @@
     ro = Pornește!
     nb = Kjør!
     fi = Lähde!
+
+  [routing_from]
+    tags = ios,android
+    comment = Routing planning: button "Route from" in PP.
+    en = Route from
+    ru = Маршрут отсюда
+
+  [routing_to]
+    tags = ios,android
+    comment = Routing planning: button "Route to" in PP.
+    en = Route to
+    ru = Маршрут сюда
 
   [downloader_retry]
     tags = ios,android,tizen
@@ -14079,7 +14091,7 @@
   [next_turn_then]
     tags = ios, android
     en = Then
-    ru = След.
+    ru = Далее
     fr = Luego
     da = Så
     id = Lalu
