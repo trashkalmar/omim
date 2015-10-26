@@ -481,8 +481,12 @@
 	<!-- Context menu item for downloader. -->
 	<string name="downloader_download_map">Загрузить карту</string>
 	<string name="downloader_download_map_no_routing">Загрузить карту без маршрутов</string>
-	<!-- Button for routing PP. -->
+	<!-- Button for routing. -->
 	<string name="routing_go">Поехали!</string>
+	<!-- Routing planning: button "Route from" in PP. -->
+	<string name="routing_from">Маршрут отсюда</string>
+	<!-- Routing planning: button "Route to" in PP. -->
+	<string name="routing_to">Маршрут сюда</string>
 	<!-- Item status in downloader. -->
 	<string name="downloader_retry">Повторите попытку</string>
 	<!-- Item in context menu. -->
@@ -847,7 +851,7 @@
 	<string name="rate_alert_less_than_four_star_message">Расскажите, что мы могли бы улучшить?</string>
 	<string name="categories">Категории</string>
 	<string name="history">История</string>
-	<string name="next_turn_then">След.</string>
+	<string name="next_turn_then">Далее</string>
 	<string name="closed">Закрыто</string>
 	<string name="back_to">Назад к %s</string>
 	<string name="search_not_found">К сожалению, мы ничего не нашли.</string>

@@ -742,8 +742,14 @@
 
 "downloader_download_map_no_routing" = "Download kort uden ruteplanlægning";
 
-/* Button for routing PP. */
+/* Button for routing. */
 "routing_go" = "Kør!";
+
+/* Routing planning: button "Route from" in PP. */
+"routing_from" = "Route from";
+
+/* Routing planning: button "Route to" in PP. */
+"routing_to" = "Route to";
 
 /* Item status in downloader. */
 "downloader_retry" = "Prøv igen";

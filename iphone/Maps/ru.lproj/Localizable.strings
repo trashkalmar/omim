@@ -742,8 +742,14 @@
 
 "downloader_download_map_no_routing" = "Загрузить карту без маршрутов";
 
-/* Button for routing PP. */
+/* Button for routing. */
 "routing_go" = "Поехали!";
+
+/* Routing planning: button "Route from" in PP. */
+"routing_from" = "Маршрут отсюда";
+
+/* Routing planning: button "Route to" in PP. */
+"routing_to" = "Маршрут сюда";
 
 /* Item status in downloader. */
 "downloader_retry" = "Повторите попытку";
@@ -1314,7 +1320,7 @@
 
 "history" = "История";
 
-"next_turn_then" = "След.";
+"next_turn_then" = "Далее";
 
 "closed" = "Закрыто";
 

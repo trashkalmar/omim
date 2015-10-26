@@ -742,8 +742,14 @@
 
 "downloader_download_map_no_routing" = "下載不帶路線的地圖";
 
-/* Button for routing PP. */
+/* Button for routing. */
 "routing_go" = "開始！";
+
+/* Routing planning: button "Route from" in PP. */
+"routing_from" = "Route from";
+
+/* Routing planning: button "Route to" in PP. */
+"routing_to" = "Route to";
 
 /* Item status in downloader. */
 "downloader_retry" = "重試";

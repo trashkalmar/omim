@@ -742,8 +742,14 @@
 
 "downloader_download_map_no_routing" = "Haritayı rota olmadan indirin";
 
-/* Button for routing PP. */
+/* Button for routing. */
 "routing_go" = "Git!";
+
+/* Routing planning: button "Route from" in PP. */
+"routing_from" = "Route from";
+
+/* Routing planning: button "Route to" in PP. */
+"routing_to" = "Route to";
 
 /* Item status in downloader. */
 "downloader_retry" = "Tekrar Dene";

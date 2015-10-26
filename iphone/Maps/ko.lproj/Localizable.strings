@@ -742,8 +742,14 @@
 
 "downloader_download_map_no_routing" = "라우팅없이 지도 다운로드";
 
-/* Button for routing PP. */
+/* Button for routing. */
 "routing_go" = "이동!";
+
+/* Routing planning: button "Route from" in PP. */
+"routing_from" = "Route from";
+
+/* Routing planning: button "Route to" in PP. */
+"routing_to" = "Route to";
 
 /* Item status in downloader. */
 "downloader_retry" = "다시 시도";
