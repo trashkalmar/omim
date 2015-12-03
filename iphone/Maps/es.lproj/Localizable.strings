@@ -521,6 +521,9 @@
 
 "pref_tts_how_to_set_up_voice" = "Cómo configurar la voz";
 
+/* Settings «Route» category: «Record track» title */
+"pref_track_record_enabled_title" = "Record GPS track";
+
 "placepage_distance" = "Distancia";
 
 "placepage_coordinates" = "Coordenadas";
