@@ -5451,6 +5451,12 @@
     nl = Hoe stel je de stem in
     pt = Como configurar a voz
 
+  [pref_track_record_enabled_title]
+     tags = android
+     comment = Settings «Route» category: «Record track» title
+     en = Record GPS track
+     ru = Запись маршрута
+
   [placepage_distance]
     en = Distance
     fr = Distance
