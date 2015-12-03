@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.mapswithme.maps.R;
+import com.mapswithme.maps.location.TrackRecorder;
 import com.mapswithme.maps.sound.LanguageData;
 import com.mapswithme.maps.sound.TtsPlayer;
 import com.mapswithme.util.Config;
@@ -150,6 +151,20 @@ public class RoutePrefsFragment extends PreferenceFragment
 
     mPrefEnabled = (TwoStatePreference) findPreference(getString(R.string.pref_tts_enabled));
     mPrefLanguages = (ListPreference) findPreference(getString(R.string.pref_tts_language));
+    findPreference(getString(R.string.pref_track_record_enabled)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener()
+    {
+      @Override
+      public boolean onPreferenceChange(Preference preference, Object newValue)
+      {
+        if ((Boolean)newValue)
+          TrackRecorder.INSTANCE.start();
+        else
+          TrackRecorder.INSTANCE.stop();
+
+        return true;
+      }
+    });
+
     update();
   }
 

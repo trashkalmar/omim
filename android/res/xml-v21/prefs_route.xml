@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:persistent="false">
+  xmlns:android="http://schemas.android.com/apk/res/android">
   <SwitchPreference
     android:key="@string/pref_tts_enabled"
     android:title="@string/pref_tts_enable_title"
@@ -11,4 +10,10 @@
   <ListPreference
     android:key="@string/pref_tts_language"
     android:title="@string/pref_tts_language_title"/>
+
+  <SwitchPreference
+    android:key="@string/pref_track_record_enabled"
+    android:title="@string/pref_track_record_enabled_title"
+    android:switchTextOn=""
+    android:switchTextOff=""/>
 </PreferenceScreen>
