@@ -5457,6 +5457,12 @@
      en = Record GPS track
      ru = Запись маршрута
 
+  [pref_track_record_length_title]
+     tags = android
+     comment = Settings «Route» category: «Track length» title
+     en = Track length
+     ru = Длина трека
+
   [placepage_distance]
     en = Distance
     fr = Distance
