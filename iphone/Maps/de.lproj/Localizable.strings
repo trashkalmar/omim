@@ -524,6 +524,9 @@
 /* Settings «Route» category: «Record track» title */
 "pref_track_record_enabled_title" = "Record GPS track";
 
+/* Settings «Route» category: «Track length» title */
+"pref_track_record_length_title" = "Track length";
+
 "placepage_distance" = "Distanz";
 
 "placepage_coordinates" = "Koordinaten";
