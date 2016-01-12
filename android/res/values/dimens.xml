@@ -29,7 +29,11 @@
 
   <dimen name="margin_navigation_buttons">@dimen/margin_quarter</dimen>
 
-  <dimen name="base_block_size">48dp</dimen>
+  <!-- base sizes -->
+  <dimen name="base_block_height">48dp</dimen>
+  <dimen name="item_one_line_height">56dp</dimen>
+  <dimen name="item_two_lines_height">72dp</dimen>
+
 
   <dimen name="dialog_max_height">320dp</dimen>
   <dimen name="search_item_height">56dp</dimen>

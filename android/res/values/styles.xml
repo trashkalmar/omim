@@ -25,6 +25,10 @@
     <item name="android:background">@drawable/bg_btn_green</item>
   </style>
 
+  <style name="MwmWidget.Button.Blue">
+    <item name="android:background">@drawable/bg_btn_blue</item>
+  </style>
+
   <style name="MwmWidget.ProgressWheel.RoutingPlan">
     <item name="android:layout_width">@dimen/routing_selector_wheel_size</item>
     <item name="android:layout_height">@dimen/routing_selector_wheel_size</item>
