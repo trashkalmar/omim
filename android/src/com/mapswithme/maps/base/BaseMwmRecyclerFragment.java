@@ -99,4 +99,9 @@ public abstract class BaseMwmRecyclerFragment extends Fragment
     else
       NavUtils.navigateUpFromSameTask(activity);
   }
+
+  public BaseMwmFragmentActivity getMwmActivity()
+  {
+    return (BaseMwmFragmentActivity) getActivity();
+  }
 }

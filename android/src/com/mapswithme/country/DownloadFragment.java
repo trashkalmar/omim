@@ -31,7 +31,7 @@ public class DownloadFragment extends BaseMwmListFragment implements View.OnClic
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
   {
-    return inflater.inflate(R.layout.fragment_downloader, container, false);
+    return inflater.inflate(R.layout.fragment_downloader_old, container, false);
   }
 
   @Override
@@ -39,15 +39,10 @@ public class DownloadFragment extends BaseMwmListFragment implements View.OnClic
   {
     super.onViewCreated(view, savedInstanceState);
     initToolbar();
-    if (getArguments() != null && getArguments().getBoolean(DownloadActivity.EXTRA_OPEN_DOWNLOADED_LIST, false))
-      openDownloadedList();
-    else
-    {
-      mExtendedAdapter = getExtendedAdapter();
-      setListAdapter(mExtendedAdapter);
-      mMode = MODE_DISABLED;
-      mListenerSlotId = ActiveCountryTree.addListener(this);
-    }
+    mExtendedAdapter = getExtendedAdapter();
+    setListAdapter(mExtendedAdapter);
+    mMode = MODE_DISABLED;
+    mListenerSlotId = ActiveCountryTree.addListener(this);
   }
 
   private void initToolbar()

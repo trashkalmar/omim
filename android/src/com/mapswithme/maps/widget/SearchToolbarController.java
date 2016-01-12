@@ -22,10 +22,10 @@ public class SearchToolbarController extends ToolbarController
     SearchToolbarController getController();
   }
 
-  private final EditText mQuery;
-  private final View mProgress;
-  private final View mClear;
-  private final View mVoiceInput;
+  protected final EditText mQuery;
+  protected final View mProgress;
+  protected final View mClear;
+  protected final View mVoiceInput;
 
   private final boolean mVoiceInputSupported = InputUtils.isVoiceInputSupported(mActivity);
 
