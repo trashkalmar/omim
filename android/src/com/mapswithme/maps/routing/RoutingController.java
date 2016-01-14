@@ -59,7 +59,7 @@ public class RoutingController
     void showSearch();
     void showRoutePlan(boolean show, @Nullable Runnable completionListener);
     void showNavigation(boolean show);
-    void showDownloader(boolean openDownloadedList);
+    void showDownloader();
     void updateMenu();
     void updatePoints();
 
@@ -173,7 +173,7 @@ public class RoutingController
         ActiveCountryTree.downloadMapsForIndices(mLastMissingRoutes, StorageOptions.MAP_OPTION_CAR_ROUTING);
 
         if (mContainer != null)
-          mContainer.showDownloader(true);
+          mContainer.showDownloader();
       }
 
       @Override
@@ -184,7 +184,7 @@ public class RoutingController
           cancel();
 
           if (mContainer != null)
-            mContainer.showDownloader(false);
+            mContainer.showDownloader();
         }
       }
     });

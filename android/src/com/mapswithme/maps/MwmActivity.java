@@ -26,7 +26,6 @@ import java.io.Serializable;
 import java.util.Stack;
 
 import com.mapswithme.country.ActiveCountryTree;
-import com.mapswithme.country.DownloadActivity;
 import com.mapswithme.country.DownloadFragment;
 import com.mapswithme.maps.Framework.OnBalloonListener;
 import com.mapswithme.maps.MapStorage.Index;
@@ -40,6 +39,7 @@ import com.mapswithme.maps.bookmarks.ChooseBookmarkCategoryFragment;
 import com.mapswithme.maps.bookmarks.data.BookmarkManager;
 import com.mapswithme.maps.bookmarks.data.MapObject;
 import com.mapswithme.maps.bookmarks.data.MapObject.ApiPoint;
+import com.mapswithme.maps.downloader.DownloadActivity;
 import com.mapswithme.maps.location.LocationHelper;
 import com.mapswithme.maps.location.LocationPredictor;
 import com.mapswithme.maps.routing.NavigationController;
@@ -270,19 +270,17 @@ public class MwmActivity extends BaseMwmFragmentActivity
   }
 
   @Override
-  public void showDownloader(boolean openDownloadedList)
+  public void showDownloader()
   {
-    final Bundle args = new Bundle();
-    args.putBoolean(DownloadActivity.EXTRA_OPEN_DOWNLOADED_LIST, openDownloadedList);
     if (mIsFragmentContainer)
     {
       SearchEngine.cancelSearch();
       mSearchController.refreshToolbar();
-      replaceFragment(DownloadFragment.class, args, null);
+      replaceFragment(DownloadFragment.class, null, null);
     }
     else
     {
-      startActivity(new Intent(this, DownloadActivity.class).putExtras(args));
+      startActivity(new Intent(this, DownloadActivity.class));
     }
   }
 
@@ -329,9 +327,11 @@ public class MwmActivity extends BaseMwmFragmentActivity
     mFrame = findViewById(R.id.map_fragment_container);
 
     mFadeView = (FadeView) findViewById(R.id.fade_view);
-    mFadeView.setListener(new FadeView.Listener() {
+    mFadeView.setListener(new FadeView.Listener()
+    {
       @Override
-      public void onTouch() {
+      public void onTouch()
+      {
         mMainMenu.close(true);
       }
     });
@@ -406,9 +406,11 @@ public class MwmActivity extends BaseMwmFragmentActivity
 
   private void startLocationToPoint(String statisticsEvent, String alohaEvent, final @Nullable MapObject endPoint)
   {
-    closeMenu(statisticsEvent, alohaEvent, new Runnable() {
+    closeMenu(statisticsEvent, alohaEvent, new Runnable()
+    {
       @Override
-      public void run() {
+      public void run()
+      {
         RoutingController.get().prepare(endPoint);
 
         if (mPlacePage.isDocked() || !mPlacePage.isFloating())
@@ -502,7 +504,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
             @Override
             public void run()
             {
-              showDownloader(false);
+              showDownloader();
             }
           });
           break;
@@ -598,7 +600,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
     else if (intent.hasExtra(EXTRA_UPDATE_COUNTRIES))
     {
       ActiveCountryTree.updateAll();
-      showDownloader(true);
+      showDownloader();
     }
   }
 
@@ -666,12 +668,12 @@ public class MwmActivity extends BaseMwmFragmentActivity
       mLocationPredictor.reset(location);
 
     MapFragment.nativeLocationUpdated(location.getTime(),
-                                       location.getLatitude(),
-                                       location.getLongitude(),
-                                       location.getAccuracy(),
-                                       location.getAltitude(),
-                                       location.getSpeed(),
-                                       location.getBearing());
+                                      location.getLatitude(),
+                                      location.getLongitude(),
+                                      location.getAccuracy(),
+                                      location.getAltitude(),
+                                      location.getSpeed(),
+                                      location.getBearing());
 
     if (mPlacePage.getState() != State.HIDDEN)
       mPlacePage.refreshLocation(location);
@@ -1288,7 +1290,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
   {
     if (mIsFragmentContainer)
     {
-      RoutingPlanFragment fragment = (RoutingPlanFragment)getFragment(RoutingPlanFragment.class);
+      RoutingPlanFragment fragment = (RoutingPlanFragment) getFragment(RoutingPlanFragment.class);
       if (fragment != null)
         fragment.updatePoints();
     }
@@ -1303,7 +1305,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
   {
     if (mIsFragmentContainer)
     {
-      RoutingPlanFragment fragment = (RoutingPlanFragment)getFragment(RoutingPlanFragment.class);
+      RoutingPlanFragment fragment = (RoutingPlanFragment) getFragment(RoutingPlanFragment.class);
       if (fragment != null)
         fragment.updateBuildProgress(progress, router);
     }

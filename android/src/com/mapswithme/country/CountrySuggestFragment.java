@@ -17,7 +17,6 @@ import com.mapswithme.maps.Framework;
 import com.mapswithme.maps.MapStorage;
 import com.mapswithme.maps.R;
 import com.mapswithme.maps.base.BaseMwmFragment;
-import com.mapswithme.maps.base.BaseMwmFragmentActivity;
 import com.mapswithme.maps.location.LocationHelper;
 import com.mapswithme.maps.widget.WheelProgressView;
 import com.mapswithme.util.StringUtils;
@@ -238,8 +237,7 @@ public class CountrySuggestFragment extends BaseMwmFragment implements View.OnCl
 
   private void selectMapForDownload()
   {
-    final BaseMwmFragmentActivity parent = (BaseMwmFragmentActivity) getActivity();
-    parent.replaceFragment(DownloadFragment.class, null, null);
+    getMwmActivity().replaceFragment(DownloadFragment.class, null, null);
   }
 
   private void cancelCurrentDownload()
